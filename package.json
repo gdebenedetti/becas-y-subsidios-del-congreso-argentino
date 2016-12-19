@@ -4,7 +4,8 @@
   "description": "Visualización de las erogaciones de los legisladores argentinos en concepto de becas y subsidios",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-dev": "NODE_ENV=development nodemon ./index.js",
+    "start": "NODE_ENV=production node ./index.js"
   },
   "repository": {
     "type": "git",
@@ -22,15 +23,16 @@
     "legislativo"
   ],
   "author": "Guido De Benedetti <gdebenedetti@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/gdebenedetti/becas-y-subsidios-del-congreso-argentino/issues"
   },
   "homepage": "https://github.com/gdebenedetti/becas-y-subsidios-del-congreso-argentino#readme",
   "dependencies": {
+  	"scraperjs": "^1.2.0",
     "express": "^4.14.0"
   },
   "devDependencies": {
-    "scraperjs": "^1.2.0"
+    "nodemon": "1.11.0"
   }
 }

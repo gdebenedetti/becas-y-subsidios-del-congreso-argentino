@@ -3,6 +3,7 @@
  */
 const express = require('express');
 const api = require('./api');
+const config = require('./config');
 
 /**
  * Create app and router
@@ -24,6 +25,6 @@ app.use('/api', api);
  */
 process.on('unhandledException', err => console.log(err.toString()));
 
-app.listen(6548, () => {
-  console.log('App listening on port 6548.');
+app.listen(config.server.port, () => {
+    console.log('App listening on port ${config.server.port}.');
 });
